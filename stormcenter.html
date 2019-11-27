@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--My styles-->
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <title>SunnyClimate | Storm Center</title>
+</head>
+<body>
+    <div class="alert" id="alertFridays">
+        <h3 class="alertText">Sunday = Preston Pancakes in the park!<br>9:00 A.M Friday at the city park.</h3>
+    </div>
+    <header>
+        <div class="container-logo">
+        <img src="images/SunnyClimate-White.png" alt="SunnyClimate">
+        </div>
+        <nav>
+            <ul>
+                <li id="menu-icon"><a href="#" onclick="menu()">&#9776; Menu</a></li>
+
+                <div id="menu">
+                    <div id="menutext" class="menuStyle">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="preston.html">Preston</a></li>
+                        <li><a href="sodasprings.html">Soda Springs</a></li>
+                        <li><a href="fishhaven.html">Fish Haven</a></li>
+                        <li class="ActualPage"><a href="stormcenter.html">Storm Center</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="container-form">
+            <form action="thanks.html">
+                <label>*Full Name:</label><br>
+                <input class="box" type="text" name="name" pattern="[A-Za-z ]{5,20}" title="* Only accepts alpha characters * Minimum of five characters" required><br>
+
+                <label>Email:</label><br>
+                <input class="box" type="email" name="email" placeholder="user@email.com"><br>
+
+                <label>*Phone Number:</label><br>
+                <input class="box" type="tel" name="phone" required><br>
+
+                <label>*Zip Code:</label><br>
+                <input class="box" id="zip" name="zip" type="text" pattern="(\d{5}([\-]\d{4})?)" required><br>
+                
+                <label>Date:</label><br>
+                <input class="box" type="date" name="theDate"><br>
+                
+                <label >storm type:</label><br>
+		        <input class="box" name="browsers" list="browserlist" placeholder="Select Region">
+		        <datalist id="browserlist">
+			        <option value="Flash Flood">
+  	                <option value="Hail">
+                    <option value="Hurricane">
+                    <option value="Thunderstorm">
+                    <option value="Tornado">
+                </datalist>
+                <br>
+                <hr>
+                <label >Storm severity (Level 1 to 10):</label><br>
+		        <input class="box" type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)"><br>
+                <span id="ratingvalue">Level 5</span><br>
+                <hr>
+                <br>
+                <fieldset>
+                        <legend>User in-danger level<em>(Choose one)</em></legend>
+                        <div>
+                            <input type="radio" id="time1" name="time" checked>
+                            <label for="time1">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="time2" name="time">
+                            <label for="time2">Maybe</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="time3" name="time">
+                            <label for="time3">No</label>
+                        </div>
+                    </fieldset>
+                    <br>
+                    <label>Comments</label><br>
+                    <textarea rows="4" cols="50" placeholder="Please write your comments"></textarea>
+                    <br>
+                    <input id="button-submit" type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="container-image">
+            <img id="image-form" src="images/img-form.png" alt="Background-image">
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <p class="footerText">SunnyClimate | Lesson-8 | Arturo Ocampo © 2019</p>
+            <p id="date" class="footerText"></p>
+        </div>
+    </footer>
+    <script>
+        var d = new Date();
+        document.getElementById("date").innerHTML = d;
+    </script>
+    <script>
+        function adjustRating(rating) {
+            document.getElementById("ratingvalue").innerHTML = "Level" + " " + rating;
+        }
+    </script>
+    <script src="js/MyJS.js"></script>
+    <script src="js/alertfridays.js"></script>
+</body>
+</html>

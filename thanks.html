@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--My styles-->
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <title>SunnyClimate | Thank You</title>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+        <img src="images/SunnyClimate-White.png" alt="SunnyClimate">
+        </div>
+        <nav>
+            <ul>
+                <li id="menu-icon"><a href="#" onclick="menu()">&#9776; Menu</a></li>
+
+                <div id="menu">
+                    <div id="menutext" class="menuStyle">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="preston.html">Preston</a></li>
+                        <li><a href="sodasprings.html">Soda Springs</a></li>
+                        <li><a href="fishhaven.html">Fish Haven</a></li>
+                        <li><a href="stormcenter.html">Storm Center</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="container-thanks">
+            <img id="logo-thankspage" src="images/SunnyClimate.png" alt="Logo">
+            <h4>Thanks for your report</h4>
+            <p>- Your form has been sent correctly -</p>
+            <br>
+            <p class="little-text">This window will close automatically in: <span id="tiempoact">
+                </span> segundos</p>
+            </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <p class="footerText">SunnyClimate | Lesson-8 | Arturo Ocampo © 2019</p>
+            <p id="date" class="footerText"></p>
+        </div>
+    </footer>
+    <script>
+        var d = new Date();
+        document.getElementById("date").innerHTML = d;
+    </script>
+    <script>
+        var tiempo = 5;
+         function cuentaRegresiva(){
+         if (tiempo > 0){
+            tiempo--
+         }
+         else{
+            window.history.back();
+          
+         }
+        document.getElementById("tiempoact").innerHTML=tiempo
+         setTimeout("cuentaRegresiva()",1000)
+         }
+        window.onload=function(){
+        cuentaRegresiva();
+          };
+        </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700');
+main{font-family: 'Ubuntu', sans-serif;}
+#italic{font-style:italic;}
+table, th, td{
+  border:1px solid grey;
+  border-collapse: collapse;
+  width:400px;
+  height:40px;
+  text-align:center;
+  }
+thead{
+  background:#7fb9c2;
+  text-align:center;
+  }
+.title{color:white;}
+.Dark-Blue{
+  background:#628ca6;
+  }
+.Row-Color{
+  background:#e7f0ed;
+  }
+.Row-Color2{
+  background:#e7ffed;
+  }
+tfoot{background:#7fb9c2;}

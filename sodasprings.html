@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--My styles-->
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/mobile.css">
+
+    <title>SunnyClimate | Soda Springs</title>
+</head>
+<body>
+    <div class="alert" id="alertCome">
+            <a href="#" onclick="showevents()"><h3>Upcoming Events in Soda Springs</h3></a>
+            <div id="Events-Preston">
+                <p class="TextArticle" id="Upcoming-1"></p>
+                <p class="TextArticle" id="Upcoming-2"></p>
+                <p class="TextArticle" id="Upcoming-3"></p>
+            </div>
+        </div>
+    <header>
+        <div class="container-logo">
+        <img src="images/SunnyClimate-White.png" alt="SunnyClimate">
+        </div>
+        <nav>
+            <ul>
+                <li id="menu-icon"><a href="#" onclick="menu()">&#9776; Menu</a></li>
+
+                <div id="menu">
+                    <div id="menutext" class="menuStyle">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="preston.html">Preston</a></li>
+                        <li class="ActualPage"><a href="sodasprings.html">Soda Springs</a></li>
+                        <li><a href="fishhaven.html">Fish Haven</a></li>
+                        <li><a href="stormcenter.html">Storm Center</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <!--Container Title-->
+            <div class="ContainerTitles">
+                <h1>Soda Springs, Idaho</h1>
+            </div>
+            <div class="container-principal-img">
+                <!--Container Weather Summary-->
+                <div class="container-weather">
+                    <h2>Weather Summary</h2>
+                    <hr>
+                    <p class="text-summary">Currently: <span class="text-summary-color" id="currently"></span></p>
+                    <p class="text-summary">Hight: <span class="text-summary-color" id="hight"></span><span class="text-summary-color"> ºF</span></p>
+                    <p class="text-summary">Wind Chill: <span class="text-summary-color" id="wind-chill"></span><span class="text-summary-color"> ºF</span></p>
+                    <p class="text-summary">Humidity: <span class="text-summary-color" id="humidity"></span><span class="text-summary-color"> %</span></p>
+                    <p class="text-summary">Wind Speed: <span class="text-summary-color" id="wind-speed"></span><span class="text-summary-color"> mph</span></p>
+                </div>
+                <!--Principal Image-->
+                <picture>
+                    <source media="(min-width: 769px)" srcset="images/SodaSprings(Desktop).png">
+                    <source media="(min-width: 426px)" srcset="images/SodaSprings(Tablet).png">
+                    <img src="images/SodaSprings(Mobile).png" alt="Soda Springs">
+                </picture>
+            </div>
+            <!--forecast-->
+            <div class="Container-forecast" id="forecast">
+                <div class="ContainerTitles">
+                    <p class="Titles-section">5 Day Forecast</p>
+                </div>
+                <table>
+                    <tr class="style-header-table">
+                        <th id="day1-day-name">Mon</th>
+                        <th id="day2-day-name">Tue</th>
+                        <th id="day3-day-name">Wed</th>
+                        <th id="day4-day-name">Thu</th>
+                        <th id="day5-day-name">Fri</th>
+                    </tr>
+                    <tr class="style-body-table">
+                        <td class="Text-forecast">
+                            <img class="img-icon-forecast" id="day1-weather-icon" src="images/Rain.png" alt="...">
+                            <br>
+                            <span id="day1-temperature"></span>° F
+                        </td>
+                        <td class="Text-forecast">
+                            <img class="img-icon-forecast" id="day2-weather-icon" src="images/Sunny.png" alt="...">
+                            <br>
+                            <span id="day2-temperature"></span>° F
+                        </td>
+                        <td class="Text-forecast">
+                            <img class="img-icon-forecast" id="day3-weather-icon" src="images/Rain.png" alt="...">
+                            <br>
+                            <span id="day3-temperature"></span>° F
+                        </td>
+                        <td class="Text-forecast">
+                            <img class="img-icon-forecast" id="day4-weather-icon" src="images/Sunny.png" alt="...">
+                            <br>
+                            <span id="day4-temperature"></span>° F
+                        </td>
+                        <td class="Text-forecast">
+                            <img class="img-icon-forecast" id="day5-weather-icon" src="images/Snow.png" alt="...">
+                            <br>
+                            <span id="day5-temperature"></span>° F
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+                <!-- Article section -->
+                <article>
+                    <div class="container-article">
+                        <div class="img-container-article">
+                            <img src="images/SodaSprings-Article.png" alt="Preston">
+                        </div>
+                        <h2 class="TitlesArticle">Two snowstorms expected to hit Idaho</h2>
+                        <p class="ItalicText">By Jeff Papworth</p>
+                        <p class="TextArticle">
+                                East Idaho is expected to get hit by a strong two-day snowstorm on Wednesday and Thursday and a less powerful storm before then on Monday and Tuesday.
+                                The big storm will enter East Idaho from the southwest with the first flurries falling on Wednesday morning and the snow continuing through Thursday night. There’s even a chance the snow could last into Friday in East Idaho.
+                                The National Weather Service said East Idaho’s lower elevation areas, including Pocatello, Idaho Falls, Blackfoot and Rexburg, will most likely receive 2 to 4 inches of snow on Wednesday and Thursday, but up to 6 inches is possible in a worst-case scenario.
+                                More snow is expected to fall on East Idaho’s higher elevations on Wednesday and Thursday with 5 to 7 inches of snow possible. The Island Park, Spencer, Montpelier and Soda Springs areas could receive the most snow in East Idaho from the storm.
+
+                                The central Idaho mountains, including Hailey, Ketchum, Stanley and Challis, could see up to 12 inches of snow Wednesday morning through Thursday night as a result of the storm, according to the weather service.
+                                The weather service said people should pay attention to forecast updates because the snowfall predictions for the central mountains as well as East Idaho could change as the storm approaches. The weather service said it’s letting people know about the Wednesday-Thursday storm now so they can make adjustments to their Thanksgiving travel plans.
+                                Temperatures in East Idaho will drop this week as the big storm approaches. The storm is not expected to be packing high winds, so drifting and blowing snow is not expected to be a problem.
+                                Before the big storm hits on Wednesday and Thursday, snow is in the forecast for East Idaho on Monday and Tuesday as a smaller storm passes through the region.
+                        </p>
+                    </div>
+                </article>
+                <!--Section Maps and social networks-->
+                <section class="seccion-info width100">
+                    <div class="col-50" id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7750.0528196767345!2d-111.88008022051399!3d42.09535335694314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263%2C%20USA!5e0!3m2!1sen!2smx!4v1571417917029!5m2!1sen!2smx" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                    <div class="col-50 info">
+                        <h3>SunnyClimate</h3>
+                        <p>&#9880; 30 N 1st E Preston, ID 83263</p>
+                        <p>&#9742; 55 5555 5555</p>
+                        <p>&#9993; contact@sunnyclimate.com</p>
+                        <div class="networks">
+                            <a href="#">
+                                <img class="iconos" src="images/facebook.png" alt="facebook">
+                            </a>
+
+                            <a href="#">
+                                <img class="iconos" src="images/twitter.png" alt="Twiiter">
+                            </a>
+
+                            <a href="#">
+                                <img class="iconos" src="images/youtube.png" alt="YouTube">
+                            </a>
+                        </div>
+
+                    </div>
+                </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <p class="footerText">SunnyClimate | Lesson-11 | Arturo Ocampo © 2019</p>
+            <p id="date" class="footerText"></p>
+        </div>
+    </footer>
+    <script>
+        var d = new Date();
+        document.getElementById("date").innerHTML = d;
+    </script>
+    <script src="js/MyJS.js"></script>
+    <script src="js/alertfridays.js"></script>
+    <script src="js/current-SodaSprings.js"></script>
+    <script src="js/forecast-SodaSprings.js"></script>
+    <script src="js/SodaSpringsEvents.js"></script>
+
+</body>
+</html>
