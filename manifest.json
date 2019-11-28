@@ -1,0 +1,62 @@
+{
+    "short_name": "SunnyClimate",
+    "name": "SunnyClimate",
+    "icons": [
+        {
+            "src":"images/Favicon.png",
+            "sizes":"16x16",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon32x32.png",
+            "sizes":"32x32",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon48x48.png",
+            "sizes":"48x48",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon64x64.png",
+            "sizes":"64x64",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon128x128.png",
+            "sizes":"128x128",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon192x192.png",
+            "sizes":"192x192",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon256x256.png",
+            "sizes":"256x256",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon384x384.png",
+            "sizes":"384x384",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon512x512.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        },
+        {
+            "src":"images/Favicon1024x1024.png",
+            "sizes":"1024x1024",
+            "type":"image/png"
+        }
+    ],
+    "start_url": "/proyecto-pwa/index.html",
+    "background_color": "#004060",
+    "display": "standalone",
+    "scope": "/proyecto-pwa/",
+    "theme_color": "#ff7300",
+    "orientation":"portrait"
+  }

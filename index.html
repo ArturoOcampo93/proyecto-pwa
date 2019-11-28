@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/mobile.css">
 
     <!--Favicon-->
-    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="images/Favicon.png" />
     
     <!--PWA Files-->
     <meta name="theme-color" content="#004060"/>
@@ -21,11 +21,10 @@
     <meta name="apple-mobile-web-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
     <!--Favicon apple-->
-    <link rel="apple-touch-icon" href="images/favicon.png"/>
-    <link rel="apple-touch-startup-image" href="images/favicon.png"/>
+    <link rel="apple-touch-icon" href="images/Favicon.png"/>
+    <link rel="apple-touch-startup-image" href="images/Favicon.png"/>
     <!--Manifest JSON file-->
-    <link rel="manifest" href="js/manifest.json"/>
-
+    <link rel="manifest" href="manifest.json">
 
     <title>SunnyClimate | Home</title>
 </head>
@@ -150,6 +149,18 @@
     <script src="js/JSONindex.js"></script>
 
     <!--WPA JS-->
-    <script src="js/wpa.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+            });
+        }
+    </script>
 </body>
 </html>
